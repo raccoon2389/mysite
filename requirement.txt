@@ -1,0 +1,13 @@
+asgiref @ file:///home/conda/feedstock_root/build_artifacts/asgiref_1625395912402/work
+beautifulsoup4 @ file:///home/conda/feedstock_root/build_artifacts/beautifulsoup4_1631087867185/work
+Django @ file:///home/conda/feedstock_root/build_artifacts/django_1635766369754/work
+django-bootstrap4 @ file:///home/conda/feedstock_root/build_artifacts/django-bootstrap4_1634749717176/work
+django-environ==0.4.5
+importlib-metadata @ file:///home/conda/feedstock_root/build_artifacts/importlib-metadata_1602263269022/work
+Pillow==8.4.0
+pytz @ file:///home/conda/feedstock_root/build_artifacts/pytz_1633452062248/work
+six @ file:///home/conda/feedstock_root/build_artifacts/six_1620240208055/work
+soupsieve @ file:///home/conda/feedstock_root/build_artifacts/soupsieve_1636121574387/work
+sqlparse @ file:///home/conda/feedstock_root/build_artifacts/sqlparse_1631317292236/work
+typing-extensions @ file:///home/conda/feedstock_root/build_artifacts/typing_extensions_1632313171031/work
+zipp @ file:///home/conda/feedstock_root/build_artifacts/zipp_1633302054558/work
