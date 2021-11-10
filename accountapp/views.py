@@ -33,6 +33,14 @@ class AccountDetailView(DetailView, MultipleObjectMixin):
         object_list = Article.objects.filter(writer=self.get_object())
         return super(AccountDetailView, self).get_context_data(object_list=object_list, **kwargs)
 
+def get_client_ip(request):
+    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+    if x_forwarded_for:
+        ip = x_forwarded_for.split(',')[0]
+    else:
+        ip = request.META.get('REMOTE_ADDR')
+    return ip
+
 @method_decorator(has_ownership, 'get')
 @method_decorator(has_ownership, 'post')
 class AccountUpdateView(UpdateView):
@@ -41,6 +49,10 @@ class AccountUpdateView(UpdateView):
     form_class = AccountUpdateForm
     success_url = reverse_lazy('home')
     template_name = 'accountapp/update.html'
+
+    def post(self, request, **kwargs):
+        print(get_client_ip(request))
+        return super(AccountUpdateView, self).post(request, **kwargs)
 
 @method_decorator(has_ownership, 'get')
 @method_decorator(has_ownership, 'post')
